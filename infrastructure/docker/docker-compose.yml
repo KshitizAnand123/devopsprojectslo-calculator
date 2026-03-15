@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  slo-calculator:
+    build:
+      context: ../../
+      dockerfile: infrastructure/docker/Dockerfile
+    ports:
+      - "5000:5000"
