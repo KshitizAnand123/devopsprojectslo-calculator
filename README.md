@@ -1,11 +1,11 @@
 # SLO / SLI Calculator
 
-Student Name: Kshitiz Anand
-Registration No: 23FE10CSE00773
-Course: CSE3253 DevOps [PE6]
-Semester: VI (2025–2026)
-Project Type: Puppet/Monitoring
-Difficulty: Intermediate
+Student Name: Kshitiz Anand  
+Registration No: 23FE10CSE00773  
+Course: CSE3253 DevOps [PE6]  
+Semester: VI (2025–2026)  
+Project Type: Puppet/Monitoring  
+Difficulty: Intermediate  
 
 ---
 
