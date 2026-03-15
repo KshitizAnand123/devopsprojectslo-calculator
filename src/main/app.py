@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def calculate_sli(total_requests, successful_requests):
 
 @app.route("/")
 def home():
-    return "SLO/SLI Calculator Running"
+     return render_template("index.html")
 
 
 @app.route("/calculate", methods=["POST"])

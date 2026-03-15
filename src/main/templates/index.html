@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SLO / SLI Calculator</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+text-align:center;
+margin-top:100px;
+}
+
+.container{
+background:white;
+padding:30px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0px 0px 10px #ccc;
+}
+
+input{
+width:90%;
+padding:10px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+background:#007BFF;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+#result{
+margin-top:20px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>SLO / SLI Calculator</h2>
+
+<input id="total" placeholder="Total Requests">
+
+<input id="success" placeholder="Successful Requests">
+
+<input id="slo" placeholder="SLO Target (%)">
+
+<button onclick="calculate()">Calculate</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function calculate(){
+
+let total = parseFloat(document.getElementById("total").value);
+let success = parseFloat(document.getElementById("success").value);
+let slo = parseFloat(document.getElementById("slo").value);
+
+fetch("/calculate",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+total_requests: total,
+successful_requests: success,
+slo_target: slo
+})
+})
+
+.then(response => response.json())
+
+.then(data => {
+document.getElementById("result").innerHTML =
+"SLI: " + data.SLI + "% <br> Status: " + data.Status;
+})
+
+.catch(error => {
+document.getElementById("result").innerHTML = "Error calculating SLI";
+console.error(error);
+});
+
+}
+
+</script>
+
+</body>
+</html>
