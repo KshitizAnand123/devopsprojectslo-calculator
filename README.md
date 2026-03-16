@@ -42,18 +42,18 @@ This project implements a simple service that calculates SLI values based on mon
 
 ## Core Technologies
 
-Programming Language: Python
-Framework: Flask
-Database: None
+Programming Language: Python  
+Framework: Flask  
+Database: None  
 
 ## DevOps Tools
 
-Version Control: Git
-CI/CD: GitHub Actions
-Containerization: Docker
-Orchestration: Docker Compose
-Configuration Management: Puppet
-Monitoring: Nagios
+Version Control: Git  
+CI/CD: GitHub Actions  
+Containerization: Docker  
+Orchestration: Docker Compose  
+Configuration Management: Puppet  
+Monitoring: Nagios  
 
 ---
 
