@@ -104,6 +104,22 @@ Run container:
 docker run -p 5000:5000 slo-calculator
 ```
 
+## Docker Compose
+
+The project can also be deployed using Docker Compose.
+
+Run the following command:
+
+
+docker compose up --build
+
+
+This command builds the Docker image and starts the containerized application.
+
+The service will be available at:
+
+http://localhost:5000
+
 ---
 
 # API Endpoint
@@ -129,6 +145,21 @@ Example response:
  "Status": "SLO Achieved"
 }
 ```
+
+## Web Interface
+
+The application also provides a simple web interface where users can input monitoring metrics and calculate SLI values directly.
+
+URL:
+
+http://localhost:5000
+
+Users can enter:
+- Total Requests
+- Successful Requests
+- SLO Target
+
+The system then calculates the SLI and displays whether the SLO target is achieved.
 
 ---
 

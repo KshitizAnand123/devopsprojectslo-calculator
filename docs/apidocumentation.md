@@ -50,3 +50,19 @@ POST /calculate
 
 SLO Achieved → Service reliability meets target
 SLO Violated → Service reliability is below target
+
+## Web Dashboard
+
+In addition to the API endpoint, the project provides a simple web interface.
+
+URL:
+
+http://localhost:5000
+
+The dashboard allows users to:
+
+- Enter total requests
+- Enter successful requests
+- Enter SLO target
+
+The dashboard sends the data to the `/calculate` API endpoint and displays the calculated SLI and SLO result.
