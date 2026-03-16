@@ -163,6 +163,16 @@ The system then calculates the SLI and displays whether the SLO target is achiev
 
 ---
 
+# System Architecture
+
+User → Web Interface → Flask API → SLI Calculation Logic → Response
+
+1. User enters monitoring metrics in the dashboard.
+2. The UI sends a request to the `/calculate` API endpoint.
+3. The backend calculates the Service Level Indicator (SLI).
+4. The system compares the SLI with the defined SLO target.
+5. The result is returned and displayed to the user.
+
 # Project Structure
 
 ```
